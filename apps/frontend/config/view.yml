@@ -1,0 +1,28 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html
+
+  metas:
+    title:        Ramaform Zakład Produkcyjno-Usługowo-Handlowy Rafał Skutnik
+    description:  Ramaform Zakład Produkcyjno-Usługowo-Handlowy Rafał Skutnik
+    keywords:     Ramaform, Zakład, Produkcyjno-Usługowo-Handlowy, Rafał, Skutnik
+    language:     pn
+    robots:       index, follow
+
+  stylesheets:    
+    - normalize.css
+    - main.css
+    - layout.css
+    - jquery.lightbox-0.5.css
+
+
+  javascripts:    
+    - vendor/modernizr-2.6.2.min.js
+    - jflow.plus.js
+    - jquery.lightbox-0.5.min.js
+
+  has_layout:     true
+  layout:         layout

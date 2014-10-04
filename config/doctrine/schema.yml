@@ -1,0 +1,239 @@
+options:
+  connection: globocam_classic
+  type: INNODB
+  collate: utf8_unicode_ci
+  charset: utf8
+
+Slider:
+  tableName:  qui_sliders
+  actAs:
+    Timestampable:   ~
+    I18n:
+      tableName:  qui_sliders_translation
+      fields: [text, button, link]
+    Sortable: ~
+  columns:    
+    text:         { type: string(255),  notnull:  false }
+    button:       { type: string(255),  notnull:  false }
+    link:         { type: string(255),  notnull:  false }
+    file:         { type: string(255),  notnull:  true  }
+    is_public:    { type: boolean, notnull: true, default: true }
+    record_key:   { type: string(255), notnull: false, unique: false }
+
+Contact:
+  tableName:  qui_contact
+  actAs:
+    Timestampable:   ~
+    I18n:
+      tableName:  qui_contact_translation
+      fields: [email, address, map]
+  columns:    
+    email:    { type: string(255),  notnull:  true, default: "Nazwa/Tytuł"  }
+    address:  { type: clob(65532),  notnull:  false, default: "<p></p>"  }
+    map:      { type: clob(65532),  notnull:  false, default: ""  }
+
+Artcategory:
+  tableName:  qui_artcategories
+  actAs:
+    NestedSet:
+      hasManyRoots: true
+    I18n:
+      tableName:  qui_artcategories_translation
+      fields: [name]
+      actAs:
+        Sluggable:
+          fields: [name]
+          unique: true
+          canUpdate: true
+          uniqueBy: [lang, name]
+          indexName:  artcategory_slug
+  columns:
+    name: { type: string(255),  notnull:  true, default: "Nazwa kategorii" }
+    record_key:   { type: string(255), notnull: false, unique: false }
+  relations:
+    Articles:
+      class: Article
+      type: many
+      local:  id
+      foreign:  artcategory_id    
+
+Article:
+  tableName:  qui_articles
+  actAs:
+    Timestampable:   ~
+    I18n:
+      tableName:  qui_articles_translation
+      fields: [title, content]
+      actAs:
+        Sluggable:
+          fields: [title]
+          unique: true
+          canUpdate: true
+          uniqueBy: [lang, title]
+  columns:
+    artcategory_id: { type: integer,  notnull:  true  }
+    gallery_id: { type: integer,  notnull:  false  }
+    title:  { type: string(255),  notnull:  true, default: "Nazwa/Tytuł"  }
+    content:  { type: clob(65532),  notnull:  true, default: "<p></p>"  }
+    is_public:    { type: boolean, notnull: true, default: true }
+    record_key:   { type: string(255), notnull: false, unique: false }
+  relations:
+    Files:
+      class: File
+      type: many
+      local:  article_id
+      foreign:  file_id
+      refClass: ArticleFile
+    Artcategory:
+      type: one
+      local:  artcategory_id
+      foreign:  id
+      onDelete: CASCADE
+    Gallery:
+      type: one
+      local:  gallery_id
+      foreign:  id
+      onDelete: SET NULL     
+
+Gallery:
+  tableName:  qui_galleries
+  actAs:
+    Timestampable:  ~
+    I18n:
+      tableName:  qui_galleries_translation
+      fields: [name]
+      actAs:
+        Sluggable:
+          fields: [name]
+          unique: true
+          canUpdate: true
+          uniqueBy: [lang, name]
+          indexName:  gallery_slug
+  columns:
+    name:         { type: string(255),  notnull:  true, default: 'Nazwa galerii'  }
+    record_key:   { type: string(255), notnull: false, unique: false }
+    show_list:    { type: boolean, notnull: true, default: true }
+  relations:
+    Pictures:
+      class: Picture
+      type: many
+      local:  id
+      foreign:  gallery_id  
+
+Picture:
+  tableName:  qui_pictures
+  actAs:
+    Timestampable:  ~
+    I18n:
+      tableName:  qui_pictures_translation
+      fields: [title]
+  columns:    
+    gallery_id: { type: integer,  notnull:  true  }
+    file: { type: string(255) }
+    title:  { type: string(255), notnull: false }
+    is_default:    { type: boolean, notnull: true, default: false }
+  relations:
+    Gallery:
+      type: one
+      local:  gallery_id
+      foreign:  id
+      onDelete: CASCADE
+
+File:
+  tableName:  qui_files
+  actAs:
+    Timestampable:  ~
+    I18n:
+      tableName:  qui_files_translation
+      fields: [name]
+      actAs:
+        Sluggable:
+          fields: [name]
+          unique: true
+          canUpdate: true
+          uniqueBy: [lang, name]
+          indexName:  file_slug
+  columns:
+    name:  { type: string(255),  notnull:  true, default: "Nazwa pliku" }
+    file:  { type: string(255),  notnull:  true }
+    record_key:   { type: string(255), notnull: false, unique: false }
+  relations:
+    Articles:
+      class: Article
+      type: many
+      local:  file_id
+      foreign:  article_id
+      refClass: ArticleFile         
+
+sfGuardGroup:
+  tableName:  qui_guard_group
+
+sfGuardPermission:
+  tableName:  qui_guard_permission
+
+sfGuardGroupPermission:
+  tableName:  qui_guard_group_permission
+
+sfGuardUser:
+  tableName:  qui_guard_user
+
+sfGuardUserPermission:
+  tableName:  qui_guard_user_permission
+
+sfGuardUserGroup:
+  tableName:  qui_guard_user_group
+
+sfGuardRememberKey:
+  tableName:  qui_guard_remember_key
+
+sfGuardForgotPassword:
+  tableName:  qui_guard_forgot_password      
+
+ArticleFile:
+  tableName:  qui_articles_files
+  columns:
+    article_id: { type: integer,  notnull:  true, primary:  true  }
+    file_id:    { type: integer,  notnull:  true, primary:  true  }
+  relations:
+    Article:
+      local:  article_id
+      foreign:  id
+      onDelete: CASCADE
+    File:
+      local:  file_id
+      foreign:  id
+      onDelete: CASCADE      
+
+ActivityType:
+  tableName:  qui_activities_type
+  actAs:
+    Sluggable:
+      fields: [name]
+      unique: true
+      canUpdate: true
+      uniqueBy: [name]
+  columns:
+    name:         { type: string(255),  notnull:  true }
+    ico:          { type: string(255),  notnull:  false }
+    record_key:   { type: string(255),  notnull:  false, unique: false }
+  relations:
+    Activities:
+      type: many
+      local: id
+      foreign:  type_id
+
+Activity:
+  tableName:  qui_activities
+  columns:
+    name:         { type: string(255),  notnull: true }
+    type_id:      { type: integer,      notnull: true }
+    description:  { type: clob(65532),  notnull: true }
+    time_from:    { type: time,         notnull: true }
+    time_to:      { type: time,         notnull: true }
+    day:          { type: integer,      notnull: true }
+  relations:
+    ActivityType:
+      type: one
+      local: type_id
+      foreign:  id
+      onDelete: CASCADE 

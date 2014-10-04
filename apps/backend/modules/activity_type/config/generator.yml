@@ -1,0 +1,27 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           ActivityType
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          activity_type
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    css: nothing
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        title: Typy zajęć
+        display: [=id, =name]
+      filter:  
+        class: false
+      form:    ~
+      edit:    
+        title: Edytuj typ zajęć
+      new:     
+        title: Nowy typ zajęć

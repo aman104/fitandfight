@@ -1,0 +1,52 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+activities:
+  url:     /grafik.html
+  param:   { module: activities, action: index }
+
+activities_show:
+  url:     /zajecia/:slug.html
+  class:   sfDoctrineRoute
+  options: { model: ActivityType, type: object }
+  param:   { module: activities, action: show }
+
+article:
+  url:     /strona/:id/:slug.html
+  class:   sfDoctrineRoute
+  param:   { module: article, action: show }
+  options: { model: Article, type: object }
+
+artcategory:
+  url:     /kategoria/:id/:slug.html
+  class:   sfDoctrineRoute
+  param:   { module: artcategory, action: index }
+  options: { model: Artcategory, type: object }
+
+gallery:
+  url:     /galeria/:id/:slug.html
+  class:   sfDoctrineRoute
+  param:   { module: gallery, action: show }
+  options: { model: Gallery, type: object }
+
+galleries:
+  url:     /galerie.html
+  param:   { module: gallery, action: index }
+
+contact:
+  url:     /kontakt.html
+  param:   { module: contact, action: index }
+
+# default rules
+homepage:
+  url:     /
+  param:   { module: homepage, action: index }
+
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:     /:module
+  param:   { action: index }
+
+default:
+  url:     /:module/:action/*

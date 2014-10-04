@@ -1,0 +1,125 @@
+activity:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Activity
+    module:               activity
+    prefix_path:          /activity
+    column:               id
+    with_wildcard_routes: true
+
+activity_type:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                ActivityType
+    module:               activity_type
+    prefix_path:          /activity_type
+    column:               id
+    with_wildcard_routes: true
+
+contact:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                contact
+    module:               contact
+    prefix_path:          /contact
+    column:               id
+    with_wildcard_routes: true
+
+picture_del:
+  url: /picture_del/:id 
+  class: sfDoctrineRoute 
+  options: { model: Picture, type: object } 
+  param: { module: picture, action: deletePicture } 
+  requirements: 
+    sf_method: [get, post]
+
+picture_default:
+  url: /picture_default/:id 
+  class: sfDoctrineRoute 
+  options: { model: Picture, type: object } 
+  param: { module: picture, action: defaultPicture } 
+  requirements: 
+    sf_method: [get, post]
+
+slider:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Slider
+    module:               slider
+    prefix_path:          /slider
+    column:               id
+    with_wildcard_routes: true
+
+picture:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Picture
+    module:               picture
+    prefix_path:          /picture
+    column:               id
+    with_wildcard_routes: true
+
+gallery:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Gallery
+    module:               gallery
+    prefix_path:          /gallery
+    column:               id
+    with_wildcard_routes: true
+
+file:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                File
+    module:               file
+    prefix_path:          /file
+    column:               id
+    with_wildcard_routes: true
+
+article:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Article
+    module:               article
+    prefix_path:          /article
+    column:               id
+    with_wildcard_routes: true
+
+artcategory:
+  class: sfDoctrineRouteCollection
+  options:
+    model:                Artcategory
+    module:               artcategory
+    prefix_path:          /artcategory
+    column:               id
+    with_wildcard_routes: true
+
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/10-Routing
+
+sf_guard_signin:
+  url:   /login
+  param: { module: sfGuardAuth, action: signin }
+
+sf_guard_signout:
+  url:   /logout
+  param: { module: sfGuardAuth, action: signout }
+
+sf_guard_password:
+  url:   /request_password
+  param: { module: sfGuardAuth, action: password }
+
+# default rules
+homepage:
+  url:   /
+  param: { module: sfAdminDash, action: dashboard }
+  
+# generic rules
+# please, remove them by adding more specific rules
+default_index:
+  url:   /:module
+  param: { action: index }
+
+default:
+  url:   /:module/:action/*

@@ -1,0 +1,13 @@
+Slider:
+  S1:
+    file: f13e24e6568db5569e1b5a01e01c333084dafc71.png
+    Translation:
+      pl:        
+        text: Slajd 1
+    #position: 1
+  S2:
+    file: b250b2f7832970dc113e5068f96c4ba524e9c618.png
+    Translation:
+      pl:        
+        text: Slajd 2
+    #position: 2  

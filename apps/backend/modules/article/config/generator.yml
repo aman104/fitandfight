@@ -1,0 +1,34 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Article
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          article
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    css: nothing
+
+    config:
+      actions: ~
+      fields:  
+        title: {label: Tytuł}
+        artcategory: {label: Kategoria}
+        artcategory_id: {label: Kategoria}
+        is_public: {label: Widoczny}
+        created_at: {label: Data dodania}
+        gallery_id: {label: Galeria}
+        files_list: {label: Pliki}
+      list:    
+        title: Lista tekstów
+        display: [=title, _artcategory, is_public, created_at]
+      filter:  
+        class: false
+      form:    ~
+      edit:    
+        title: Edytuj tekst
+      new:     
+        title: Nowy tekst

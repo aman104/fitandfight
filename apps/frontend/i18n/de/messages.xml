@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+<xliff version="1.0">
+  <file source-language="PL" target-language="de" datatype="plaintext" original="messages" date="2011-05-25T10:25:29Z" product-name="messages">
+    <header/>
+    <body>
+      <trans-unit>
+        <source>Strona główna</source>
+        <target>Startseite</target>
+      </trans-unit>
+      <trans-unit>
+        <source>O firmie</source>
+        <target>Über uns</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Oferta</source>
+        <target>Angebot</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Realizacje</source>
+        <target>Durchführung</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Referencje</source>
+        <target>Referenzen</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Kontakt</source>
+        <target>Kontakt</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Nasza oferta</source>
+        <target>Unser Angebot</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Cena</source>
+        <target>Preis</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Wymiary</source>
+        <target>Größe</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Materiał</source>
+        <target>Werkstoff</target>
+      </trans-unit>
+      <trans-unit>
+        <source>promocja</source>
+        <target>Sonderangebot</target>
+      </trans-unit>
+      <trans-unit>
+        <source>pokaż</source>
+        <target>Mehr</target>
+      </trans-unit>
+      <trans-unit>
+        <source>szczegóły</source>
+        <target>Mehr</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Ostatnio dodane produkty</source>
+        <target>Neu hinzugefügt</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Zobacz</source>
+        <target>Mehr Inf.</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Szybki kontakt</source>
+        <target>Schnellkontakt</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Pokaż całą oferte »</source>
+        <target>Alle Kategorien anzeigen »</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Wyposażenie i urządzenia dla branży cukierniczej, spożywczej i restauracyjnej.</source>
+        <target>Einrichtung und Anlagen für die Süß-, Lebensmittel- und Restaurant Industrie</target>
+      </trans-unit>
+      <trans-unit>
+        <source>Wszelkie prawa zastrzeżone prawo do kopiowania</source>
+        <target>Alle Rechte vorbehalten</target>
+      </trans-unit>
+      <trans-unit>
+        <source></source>
+        <target></target>
+      </trans-unit>
+      <trans-unit>
+        <source></source>
+        <target></target>
+      </trans-unit>
+      <trans-unit>
+        <source></source>
+        <target></target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,28 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Artcategory
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          artcategory
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    css: nothing
+
+    config:
+      actions: ~
+      fields:  ~
+      list:    
+        table_method: getArtcategoriesQuerybackend
+        title: Lista kategorii
+        display: [=name]
+      filter:  
+        class: false
+      form:    ~
+      edit:    
+        title: Edytuj kategorie
+      new:     
+        title: Dodaj kategorie

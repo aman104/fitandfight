@@ -1,0 +1,29 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           File
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          file
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    css: nothing
+
+    config:
+      actions: ~
+      fields:  
+        created_at: {label: Data dodania}
+        name: {label: Nazwa}
+      list:    
+        title: Lista plików
+        display: [=name, created_at]
+      filter:  
+        class: false
+      form:    ~
+      edit:    
+        title: Edytuj plik
+      new:     
+        title: Dodaj plik

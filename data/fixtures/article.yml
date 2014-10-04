@@ -1,0 +1,218 @@
+Artcategory:
+  NestedSet: true
+  Artcategory1:
+    Translation:
+      pl:
+        name: Teksty
+    record_key: TEXTS
+  Artcategory2:
+    Translation:
+      pl:
+        name: Aktualności
+    record_key: NEWS
+
+Article:
+  Article1:
+    Artcategory: Artcategory1
+    Translation:
+      pl:
+        title: O nas
+        content: 'O nas'
+    record_key: COMPANY
+  Article2:
+    Artcategory: Artcategory1
+    Translation:
+      pl:
+        title: Trenerzy
+        content: '<table style="width: 100%" cellpadding="15"><tr><td><p style="text-align: center;">Jan Kowalski<br /><img src="/images/trener.png" /></p><p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>   </td> <td><p style="text-align: center;">Jan Kowalski<br /><img src="/images/trener.png" /></p><p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>   </td><td><p style="text-align: center;">Jan Kowalski<br /><img src="/images/trener.png" /></p><p style="text-align: justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>   </td></tr></table>'
+    record_key: TRAINERS
+  # Article2_1:
+  #   Artcategory: Artcategory1
+  #   Translation:
+  #     pl:
+  #       title: Zajęcia
+  #       content: ''
+  #   record_key: EXC
+  Article3:
+    Artcategory: Artcategory1
+    Translation:
+      pl:
+        title: Cennik
+        content: |
+          <table style="width: 100%" class="pricingTable">
+            <tr>
+              <td class="none"></td>
+              <th>Siłownia + sauny</th>
+              <th>Karnet open</th>
+              <td class="none"></td>
+              <th rowspan="2">Karnet do 15:00 <br />+ sb / ndz OPEN</th>
+            </tr>
+            <tr>
+              <td>1 msc</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+              <td rowspan="3">30 zł wpisowe</td>
+            </tr>
+            <tr>
+              <td>3 msc</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+            </tr>
+            <tr>
+              <td>12 msc</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+            </tr>
+          </table>
+          <br /><br />
+          <table style="width: 70%" class="pricingTable">
+            <tr>
+              <td class="none"></td>
+              <th colspan="2">Karnety ulgowe</th>
+              <td class="none"></td>
+            </tr>
+            <tr>
+              <td>1 msc</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+              <td rowspan="3">30 zł wpisowe</td>
+            </tr>
+            <tr>
+              <td>3 msc</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+            </tr>
+            <tr>
+              <td>12 msc</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+            </tr>
+          </table>
+          <br /><br />
+          <table style="width: 100%" class="pricingTable">
+            <tr>
+              <td style="font-size: 10px;">Ilość wejść <br />w miesiącu</td>
+              <th colspan="2">Sztuki walki</th>
+              <td class="none"></td>
+              <th>Dzieci & wejść w miesiącu</th>
+            </tr>
+            <tr>
+              <td>1 msc</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+              <td rowspan="3">30 zł wpisowe</td>
+              <td>119 zł</td>
+            </tr>
+            <tr>
+              <td>3 msc</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+            </tr>
+            <tr>
+              <td>12 msc</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+            </tr>
+          </table>
+          <br /><br />
+          <table style="width: 70%" class="pricingTable">
+            <tr>
+              <td class="none"></td>
+              <th colspan="2">Karnetrodzinny Open miesiąc</th>
+              <td class="none"></td>
+            </tr>
+            <tr>
+              <td>2 + 1</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+              <td rowspan="3">30 zł wpisowe</td>
+            </tr>
+            <tr>
+              <td>2 + 2</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+            </tr>
+            <tr>
+              <td>2 + 3</td>
+              <td>119 zł</td>
+              <td>119 zł</td>
+            </tr>
+          </table>
+    record_key: PRICE  
+
+  Article4:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 1 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article5:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 2 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article6:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 3 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article7:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 4 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article8:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 5 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article9:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 6 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article10:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 7 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article11:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 8 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article12:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 9 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article13:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 10 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article14:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 11 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           
+  Article15:
+    Artcategory: Artcategory2
+    Translation:
+      pl:
+        title: 12 Lorem ipsum dolor sit amat velum
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat rutrum eros sit amet sollicitudin. Suspendisse pulvinar, velit nec pharetra interdum, ante tellus ornare mi, et mollis tellus neque vitae elit. Mauris adipiscing mauris fringilla turpis interdum sed pulvinar nisi malesuada.'           

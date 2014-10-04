@@ -1,0 +1,61 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/11-App
+
+# default values
+all:
+  sf_admin_dash:
+    web_dir:                      /sfAdminDashPlugin
+    image_dir:                    /sfAdminDashPlugin/images/icons/
+    default_image:                config.png
+    resize_mode:                  thumbnail
+    site:                         FitFight
+    include_path:                 true
+    include_jquery_no_conflict:   false
+    logout:                       true
+    login_route:                  @sf_guard_signin
+    logout_route:                 @sf_guard_signout
+    categories:
+      CMS:
+        items:
+          Articles:
+            url:    article
+            name: Teksty
+            image: addedit.png
+          Artcategories:
+            url:    artcategory   
+            name: Kategorie   
+            image: categories.png 
+          Contact:
+            url:    contact   
+            name: Dane kontaktowe   
+            image: language.png 
+      Gafik:
+        items:
+          ActivitesType:
+            url: activity_type
+            name: Typy zajęć
+            images: categories.png 
+          Activites:
+            url: activity
+            name: Grafik
+            images: categories.png 
+      Media:
+        items:
+          Galeries:
+            url: gallery
+            name: Galerie
+            image: menu.png
+          Files:
+            url: file
+            name: Pliki
+            image: backup.png
+          Sliders:
+            url: slider
+            name: Slider
+            image: mediamanager.png
+      CRM:
+        items:
+          sfGuardUser:
+            url: sf_guard_user
+            name: Użytkownicy
+            image: users.png

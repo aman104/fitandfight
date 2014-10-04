@@ -1,0 +1,33 @@
+generator:
+  class: sfDoctrineGenerator
+  param:
+    model_class:           Activity
+    theme:                 admin
+    non_verbose_templates: true
+    with_show:             false
+    singular:              ~
+    plural:                ~
+    route_prefix:          activity
+    with_doctrine_route:   true
+    actions_base_class:    sfActions
+    css: nothing
+
+    config:
+      actions: ~
+      fields:  
+        name:  { label: Nazwa }
+        type:  { label: Typ }
+        description:  { label: Opis }
+        time_from: { label: Od }
+        time_to:   { label: Do }
+        day:       { label: Dzień}
+      list:    
+        title: Grafik
+        display: [=id, =name, _type, time_from, time_to, _day]
+      filter:  
+        display: [type_id]
+      form:    ~
+      edit:    
+        title: Edytuj grafik
+      new:     
+        title: Nowy grafik
