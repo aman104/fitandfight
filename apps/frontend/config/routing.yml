@@ -1,7 +1,11 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
-activities:
+activities_korfantego:
+  url:     /grafik_korfantego.html
+  param:   { module: activities, action: index2 }
+
+activities_roosevelta:
   url:     /grafik.html
   param:   { module: activities, action: index }
 

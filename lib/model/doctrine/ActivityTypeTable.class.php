@@ -17,5 +17,13 @@ class ActivityTypeTable extends Doctrine_Table
         return Doctrine_Core::getTable('ActivityType');
     }
 
+    public function getBySlugs($slugs = array())
+    {
+        $q = Doctrine_Query::create()
+                ->from('ActivityType a')
+                ->whereIn('a.slug', $slugs);
 
+        return $q->execute();
+
+    }
 }

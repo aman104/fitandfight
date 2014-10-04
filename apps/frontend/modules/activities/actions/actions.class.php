@@ -17,8 +17,14 @@ class activitiesActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
-  	 $this->types = ActivityTypeTable::getInstance()->findAll();
+  	 $this->types = ActivityTypeTable::getInstance()->getBySlugs(array('fitness', 'sztuki-walki'));
   }
+
+    public function executeIndex2(sfWebRequest $request)
+    {
+        $this->types = ActivityTypeTable::getInstance()->getBySlugs(array('fitness-korfantego', 'sztuki-walki-korfantego'));
+        $this->setTemplate('index');
+    }
 
   public function executeShow(sfWebRequest $request)
   {
